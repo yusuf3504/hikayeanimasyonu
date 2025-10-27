@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>The World Of Coffee</title>
+</head>
+
+<body>
+    <main>
+        <div class="intro">
+            <div class="coffee-cup">
+            </div>
+        </div>
+        <div class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav-logo"><i class="bi bi-globe-americas"></i> Kahve dünyası</a>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="bi bi-house-fill"></i>
+                                <span>home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>contact</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="bi bi-bookmark-plus-fill"></i>
+                                <span>about</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div>
+                <div class="search-box" id="searchBox">
+                    <input class="input" type="text" placeholder="Search" id="searchInput">
+                    <i class="bi bi-search" id="searchIcon"></i>
+                </div>
+
+                <div class="navbar-right">
+                    <button id="accountButton">Log in</button>
+                    <div class="sepet">
+                        <span id="sepet-simgesi" onclick="sepetiGoster()"><i class="bi bi-cart3"></i></span>
+                        <div id="sepet-icerik" class="sepet-icerik">
+                            <div id="urun-listesi">
+                                <span id="closeButton2">&times;</span>
+                                <div class="cart">
+                                    <h2>Sepetiniz</h2>
+                                    <div class="items"></div>
+                                    <div class="total">Toplam: 0₺</div>
+                                    <button class="btn-buy1" onclick="checkout()">Siparişi Tamamla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="profile-text-container">
+
+                    <div id="formContainer">
+                        <span id="closeButton">&times;</span>
+                        <form id="loginForm">
+                            <h2 class="baslik">Giriş Yap</h2>
+                            <button class="social-login google" type="button" onclick="signInWithGoogle()"><i
+                                    class="bi bi-google"></i> Google ile
+                                Giriş Yap</button>
+                            <button class="social-login apple" type="button" onclick="signInWithApp()"><i
+                                    class="bi bi-apple"></i> App Hesabı ile
+                                Giriş Yap</button>
+                            <button class='social-login phone' type="button" onclick="signInWithApp()">
+                                <i class="bi bi-phone"></i> Telefon Numarası ile Giriş Yap
+                            </button>
+                            <div>
+                                <label class="Giriş" for="email">E-posta:</label>
+                                <input class="input" type="email" id="email" name="email">
+                            </div>
+                            <div>
+                                <label class="Giriş" for="password">Şifre:</label>
+                                <input class="input" type="password" id="password" name="password">
+                            </div>
+                            <button type="submit">Giriş Yap</button>
+                            <button id="registerButton" type="button" onclick="toggleForms()">Hesabınız yok mu? Kayıt
+                                Olun</button>
+                        </form>
+                        <form id="registerForm" class="hidden">
+                            <span id="backButton">&larr;</span>
+                            <h2 class="Giriş">Kayıt Ol</h2>
+                            <div>
+                                <label class="Giris1" for="newEmail">E-posta:</label>
+                                <input class="inputregister" type="email" id="newEmail" name="newEmail">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="phone">Telefon Numarası:</label>
+                                <input class="inputregister" type="tel" id="phone" name="phone">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="firstName">Ad:</label>
+                                <input class="inputregister" type="text" id="firstName" name="firstName">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="lastName">Soyad:</label>
+                                <input class="inputregister" type="text" id="lastName" name="lastName">
+                            </div>
+                            <button type="submit">Kayıt Ol</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+            </nav>
+        </div>
+
+        <div class="menu-content">
+            <div class="menu1">
+                <div class="içerik">
+                    <h1 class="kahve-baslık">Kahve Dünyası</h1>
+                    <p class="menu-paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio quos maxime
+                        odit quasi eum nobis
+                        unde optio, nam eius cumque earum, neque aut autem vitae aspernatur ratione at tempore iste?</p>
+                    <button class="btn">KEŞFET</button>
+                </div>
+                <div class="orta">
+                    <span class="span-orta">BÜGÜNE <span class="elli">%50</span> ÖZEL
+                    </span>
+                </div>
+
+
+            </div>
+            <div class="menu2"></div>
+        </div>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="images/kahve1.png" alt="Slide 1">
+                    <div class="overlay">
+                        <h3 class="detay-h3">carefully selected coffee beans</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo doloribus.</p>
+                        <button class="detay">Detaylar</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/kahve2.png" alt="Slide 1">
+                    <div class="overlay">
+                        <h3 class="detay-h3">the most beautiful conversations</h3>
+                        <p>rerum ut officiis officia quibusdam voluptates!</p>
+                        <button class="detay">Detaylar</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/kahve3.png" alt="Slide 1">
+                    <div class="overlay">
+                        <h3 class="detay-h3">drinking coffee against the landscape</h3>
+                        <p>consectetur adipisicing elit. Ratione unde dolore accusamus fugit </p>
+                        <button class="detay">Detaylar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button onclick="goToSlide(0)" class="active">01</button>
+            <button onclick="goToSlide(1)">02</button>
+            <button onclick="goToSlide(2)">03</button>
+        </div>
+        <div class="urunler-menusu">
+            <div class="list-container">
+                <div class="list-wrapper">
+                    <h2 class="list-title2">KATEGORİLER</h2>
+                    <ul class="list-select">
+                        <li class="list-item">
+                            <img src="https://safnutrition.co/cdn/shop/articles/Cikolatanin-Vegan-Hali-Bitter-Cikolata-v-5fb7_Large_0b383b2d-4fe9-4b04-9795-295c2b93e010.jpg?v=1683787347&width=1500"
+                                alt="" class="list-img">
+                            <span class="list-title">Çikolata</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="https://cdn.miniyol.com/img/blogs/content/2022/06/original/kahve-3-min-1656346186-1678266732.png"
+                                alt="" class="list-img">
+                            <span class="list-title">Kahve</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzz51AWZEeHHWv4VmzZ32f0sjBMLL00PTlNg&s"
+                                alt="" class="list-img">
+                            <span class="list-title">Aksesuar</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="https://recipesblob.droetker.com.tr/assets/ec722739166f4dd78915a851d3265d59/1272x764/cikolatali-muzlu-pasta.webp"
+                                alt="" class="list-img">
+                            <span class="list-title">Pasta</span>
+                        </li>
+                        <li class="list-item">
+
+                            <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/2caca97b-77f6-48e7-837d-62642c0c9861/Derivates/12591894-e010-4a02-b04e-2627d8374298.jpg"
+                                alt="" class="list-img">
+                            <span class="list-title">Pizza</span>
+                        </li>
+                        <li class="list-item">
+                            <img src="https://static.ticimax.cloud/cdn-cgi/image/width=540,quality=99/31208/uploads/blog/cikolatali-soguk-icecek-tarifleri-nasil--03f5.jpg"
+                                alt="" class="list-img">
+                            <span class="list-title">İçeçkler</span>
+                        </li>
+                    </ul>
+                    <i class="bi bi-chevron-right arrow"></i>
+                </div>
+                <div class="list-wrapper">
+                    <h2 class="list-title2">KAMPANYALI ÜRÜNLER</h2>
+                    <ul class="list-select">
+                        <li class="list-item1">
+                            <img src="https://safnutrition.co/cdn/shop/articles/Cikolatanin-Vegan-Hali-Bitter-Cikolata-v-5fb7_Large_0b383b2d-4fe9-4b04-9795-295c2b93e010.jpg?v=1683787347&width=1500"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('Çikolata')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item1">
+                            <img src="https://cdn.miniyol.com/img/blogs/content/2022/06/original/kahve-3-min-1656346186-1678266732.png"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('Kahve')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item1">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzz51AWZEeHHWv4VmzZ32f0sjBMLL00PTlNg&s"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('Aksesuar')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item1">
+                            <img src="https://recipesblob.droetker.com.tr/assets/ec722739166f4dd78915a851d3265d59/1272x764/cikolatali-muzlu-pasta.webp"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('Pasta')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item1">
+                            <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/2caca97b-77f6-48e7-837d-62642c0c9861/Derivates/12591894-e010-4a02-b04e-2627d8374298.jpg"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('Pizza')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item1">
+                            <img src="https://static.ticimax.cloud/cdn-cgi/image/width=540,quality=99/31208/uploads/blog/cikolatali-soguk-icecek-tarifleri-nasil--03f5.jpg"
+                                alt="" class="list-img">
+                            <button class="btn-buy" onclick="addToCart('İçeçkler')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                    </ul>
+                    <i class="bi bi-chevron-right ikinci arrow"></i>
+                </div>
+
+                <div class="list-wrapper">
+                    <h2 class="list-title3">EN ÇOK SATANLAR</h2>
+                    <ul class="list-select2">
+                        <li class="list-item2">
+                            <img src="https://safnutrition.co/cdn/shop/articles/Cikolatanin-Vegan-Hali-Bitter-Cikolata-v-5fb7_Large_0b383b2d-4fe9-4b04-9795-295c2b93e010.jpg?v=1683787347&width=1500"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Gofret')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item2">
+                            <img src="https://cdn.miniyol.com/img/blogs/content/2022/06/original/kahve-3-min-1656346186-1678266732.png"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Filtre Kahve')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzz51AWZEeHHWv4VmzZ32f0sjBMLL00PTlNg&s"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Aksesuar')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+
+
+
+                        <li class="list-item2">
+                            <img src="https://cdn.miniyol.com/img/blogs/content/2022/06/original/kahve-3-min-1656346186-1678266732.png"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Filtre Kahve')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item2">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzz51AWZEeHHWv4VmzZ32f0sjBMLL00PTlNg&s"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Aksesuar')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                        <li class="list-item2">
+                            <img src="https://recipesblob.droetker.com.tr/assets/ec722739166f4dd78915a851d3265d59/1272x764/cikolatali-muzlu-pasta.webp"
+                                alt="" class="list-img3">
+                            <button class="btn-buy" onclick="addToCart('Pasta')"><i class="bi bi-plus"></i>SEPETE
+                                EKLE</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <footer>
+            <div class="footerMenus">
+                <div class="shpadding-reset"><a href="/kahve-c-1798" class="">
+                        <span class="üstbaslık">Zincir Restoranlar</span></a>
+                    <ul class="footerMenu footerMenu-1 hidden-md-down">
+                        <li><a href="/turk-kahvesi-c-3400" class="">İstanbull</a></li>
+                        <li><a href="/kapsul-kahveler-c-3486" class="">Ankara</a></li>
+                        <li><a href="/filtre-kahve-c-3401" class="">İzmir</a></li>
+                        <li><a href="/yoresel-kahve-c-3402" class="">Antalya</a></li>
+                        <li><a href="/espresso-c-3403" class="">Trabzon</a></li>
+
+
+                    </ul>
+                </div>
+                <div class="shpadding-reset1"><a href="/aksesuar-c-1802" class=""><span
+                            class="üstbaslık">YEMEKLER</span></a>
+                    <ul class="footerMenu footerMenu-1 hidden-md-down">
+                        <li><a href="/kutu-cikolata-c-3408" class="">Lahmacun</a></li>
+                        <li><a href="/atistirmalik-cikolata-c-3409" class="">Dürüm</a></li>
+                        <li><a href="/fit-lezzetler-c-3480" class="">Pizza</a></li>
+                        <li><a href="/sss/urun-gami-s-27" class="" rel="nofollow">Kebab</a></li>
+                    </ul>
+                </div>
+                <div class="shpadding-reset1"><a href="/aksesuar-c-1802" class=""><span class="üstbaslık">Bize katılın
+                        </span></a>
+                    <ul class="footerMenu footerMenu-1 hidden-md-down">
+                        <li><a href="/kutu-cikolata-c-3408" class="">Bayimiz olun</a></li>
+                        <li><a href="/atistirmalik-cikolata-c-3409" class="">Deponu Kirala</a></li>
+                        <li><a href="/fit-lezzetler-c-3480" class="">Zincir Restoranlar</a></li>
+
+                    </ul>
+                </div>
+                <div class="shpadding-reset1"><a href="/kesfet/hakkimizda" class=""><span
+                            class="üstbaslık">HAKKIMIZDA</span></a>
+                    <ul class="footerMenu footerMenu-5 hidden-md-down">
+                        <li><a href="/kesfet/hakkimizda" class="" rel="nofollow">
+                                Hikayemiz
+                            </a></li>
+                        <li><a href="/kesfet/uretim" class="" rel="nofollow">
+                                Üretim
+                            </a></li>
+                        <li><a href="/kesfet/kurumsal-cozumler" class="" rel="nofollow">
+                                Kurumsal Çözümler
+                            </a></li>
+                        <li><a href="/kesfet/kariyer" class="" rel="nofollow">
+                                Kariyer
+                            </a></li>
+                        <li><a href="/blog" class="">
+                                Blog
+                            </a></li>
+
+                        <li><a href="/kesfet/hakkimizda#degerlerimiz" class="" rel="nofollow">
+                                Değerlerimiz
+                            </a></li>
+                        <li><a href="/sertifikalarimiz" class="" rel="nofollow">
+                                Sertifikalarımız
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="shpadding-reset1"><a href="/sss" class=""><span class="üstbaslık">YARDIM</span></a>
+                    <ul class="footerMenu footerMenu-5 hidden-md-down">
+                        <li><a href="/sss/uyelik-s-26" class="" rel="nofollow">
+                                Üyelik
+                            </a></li>
+                        <li><a href="/sss/siparis-islemleri-s-23" class="" rel="nofollow">
+                                Sipariş İşlemleri
+                            </a></li>
+                        <li><a href="/sss/odeme-islemleri-s-21" class="" rel="nofollow">
+                                Ödeme İşlemleri
+                            </a></li>
+                        <li><a href="/sss/teslimat-sureci-s-25" class="" rel="nofollow">
+                                Teslimat Süreci
+                            </a></li>
+                        <li><a href="/sss/iletisim-s-31" class="" rel="nofollow">
+                                İletişim
+                            </a></li>
+                        <li>
+                            <a href="/sss/iletisim" class="">İletişim Formu</a>
+                        </li>
+                        <li>
+                            <a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/11010"
+                                title="Kahve Dünyası e-ŞİRKET Bilgileri" target="_blank" rel="noopener noreferrer">
+                                Bilgi Toplumu Hizmetleri</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="menu-share">
+                <div class="share">
+                    <div class="nav-social">
+                        <a href="" target="_blank" class="nav-social-link"><i class="bi bi-facebook"></i></a>
+
+                        <a href="" target="_blank" class="nav-social-link"><i class="bi bi-whatsapp"></i></a>
+
+                        <a href="" target="_blank" class="nav-social-link"><i class="bi bi-github"></i></a>
+
+                        <a href="" target="_blank" class="nav-social-link"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="credit">
+                    created by <span>Yusuf Yaşar</span> | all rights reserved
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

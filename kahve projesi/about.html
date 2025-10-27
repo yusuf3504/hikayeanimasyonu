@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+
+<body>
+      <div class="intro">
+    <div class="coffee-cup">
+    </div>
+  </div>
+    <div class="about-menu">
+        <div class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav-logo"><i class="bi bi-globe-americas"></i> Kahve dünyası</a>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i class="bi bi-house-fill"></i>
+                                <span>home</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>contact</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">
+                                <i class="bi bi-bookmark-plus-fill"></i>
+                                <span>about</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="nav-close" id="nav-close">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div>
+                <div class="search-box" id="searchBox">
+                    <input class="input" type="text" placeholder="Search" id="searchInput">
+                    <i class="bi bi-search" id="searchIcon"></i>
+                </div>
+                <div class="navbar-right">
+                    <button id="accountButton">Log in</button>
+                    <div class="sepet">
+                        <span id="sepet-simgesi" onclick="sepetiGoster()"><i class="bi bi-cart3"></i></span>
+                        <div id="sepet-icerik" class="sepet-icerik">
+                            <div id="urun-listesi">
+                                <span id="closeButton2">&times;</span>
+                                <div class="cart">
+                                    <h2>Sepetiniz</h2>
+                                    <div class="items"></div>
+                                    <div class="total">Toplam: 0₺</div>
+                                    <button class="btn-buy1" onclick="checkout()">Siparişi Tamamla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="profile-text-container">
+
+                    <div id="formContainer">
+                        <span id="closeButton">&times;</span>
+                        <form id="loginForm">
+                            <h2 class="baslik">Giriş Yap</h2>
+                            <button class="social-login google" type="button" onclick="signInWithGoogle()"><i
+                                    class="bi bi-google"></i> Google ile
+                                Giriş Yap</button>
+                            <button class="social-login apple" type="button" onclick="signInWithApp()"><i
+                                    class="bi bi-apple"></i> App Hesabı ile
+                                Giriş Yap</button>
+                            <button class='social-login phone'  type="button" onclick="signInWithApp()">
+                                <i class="bi bi-phone"></i> Telefon Numarası ile Giriş Yap
+                            </button>
+                            <div>
+                                <label class="Giriş" for="email">E-posta:</label>
+                                <input class="input" type="email" id="email" name="email">
+                            </div>
+                            <div>
+                                <label class="Giriş" for="password">Şifre:</label>
+                                <input class="input" type="password" id="password" name="password">
+                            </div>
+                            <button type="submit">Giriş Yap</button>
+                            <button id="registerButton" type="button" onclick="toggleForms()">Hesabınız yok mu? Kayıt
+                                Olun</button>
+                        </form>
+                        <form id="registerForm" class="hidden">
+                            <span id="backButton">&larr;</span>
+                            <h2 class="baslik">Kayıt Ol</h2>
+                            <div>
+                                <label class="Giris1" for="newEmail">E-posta:</label>
+                                <input class="inputregister" type="email" id="newEmail" name="newEmail">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="phone">Telefon Numarası:</label>
+                                <input class="inputregister" type="tel" id="phone" name="phone">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="firstName">Ad:</label>
+                                <input class="inputregister" type="text" id="firstName" name="firstName">
+                            </div>
+                            <div>
+                                <label class="Giris1" for="lastName">Soyad:</label>
+                                <input class="inputregister" type="text" id="lastName" name="lastName">
+                            </div>
+                            <button type="submit">Kayıt Ol</button>
+                        </form>
+                    </div>
+                </div>
+              
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+            </nav>
+        </div>
+        <h1 class="fire-title">
+            <span style="--i:1">A</span>
+            <span style="--i:2">B</span>
+            <span style="--i:3">O</span>
+            <span style="--i:5">U</span>
+            <span style="--i:6">T</span>
+
+        </h1>
+      
+        <div class="about-cont">
+            <div class="paragraf">
+                <p class="prf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum deleniti
+                    cupiditate.
+                    Tempore impedit sapiente tempora, explicabo accusamus suscipit! Commodi sit ea reprehenderit
+                    ducimus. Obcaecati reiciendis sunt expedita alias quo? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Deserunt ullam voluptas repellat repudiandae ea. Quisquam odio veritatis in,
+                    quas dolorem modi sed, expedita minima eaque dignissimos distinctio voluptatum. Rem, fuga?</p>
+            </div>
+            <div class="wrapper">
+
+                <section class="card fast">
+                    <span class="number">01</span><h2 class="card-h2">FAST. POWERFUL. SECURE.</h2>
+                    <p>Hızlı, güçlü ve güvenli altyapı Avalanche'nin temel özelliklerindendir.</p>
+                </section>
+
+                <section class="card scale">
+                    <span class="number">02</span><h2 class="card-h2">INFINITELY SCALABLE BY DESIGN</h2>
+                    <p>Ara katmanlar ve mimari yapısı sayesinde sonsuza kadar ölçeklenebilir.</p>
+                </section>
+
+                <section class="card custom">
+                    <span class="number">03</span><h2 class="card-h2">CUSTOMIZABLE LAYER 1S</h2>
+                    <p>İhtiyaçlarınıza uygun özelleştirilebilir ana katmanlar sunar.</p>
+                </section>
+
+                <section class="card community">
+                    <span class="number">04</span><h2 class="card-h2">GLOBAL COMMUNITY</h2>
+                    <p>Avalanche, dünya çapında bir topluluk oluşturmuştur; bilgi ve kaynakları paylaşan bir ekosistem.
+                    </p>
+
+                    <div class="footer">
+                        <div class="logo"></div>
+                        <div class="icons">
+                            <span>A</span><span>C</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    
+            <section class="grid grid-2">
+                <div class="autoShow">
+                    <figure class="figure">
+                        <img class="img1" src="images/about1.png" alt="">
+                        
+                    </figure>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque temporibus perspiciatis debitis ipsa eligendi quidem suscipit! Adipisci voluptate quis labore cumque assumenda? Voluptatibus labore doloremque odio possimus eligendi et dicta!lorem ipsum dolor sit amet consectetur adipisicing elit. Atque temporibus perspiciatis debitis ipsa eligendi quidem suscipit! Adipisci voluptate quis labore cumque assumenda? Voluptatibus labore doloremque odio possimus eligendi et dicta!
+                    lorem ipsum dolor sit amet consectetur adipisicing elit. Atque temporibus perspiciatis debitis ipsa eligendi quidem suscipit! Adipisci voluptate quis labore cumque assumenda? Voluptatibus labore doloremque odio possimus eligendi et dicta!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad, repellat.
+
+                    </p>
+                </div>
+                <div class="autoShow">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad, repellat facere voluptatibus quam nihil ducimus quo quae beatae porro nostrum pariatur autem? Doloribus, totam consequuntur vero nobis vitae ratione.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio rerum expedita nihil a blanditiis beatae laboriosam doloribus dolores ad, voluptate sequi magni ratione voluptates obcaecati molestias nemo corrupti ab. Repellat!
+                    Enim corrupti esse quo minus ut! A exercitationem repellat amet sunt, earum fugiat ullam quod deserunt ducimus laboriosam ad itaque nihil cupiditate vitae, suscipit, odio ut laborum. Amet, sequi aut.lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ad, repellat facere voluptatibus quam nihil ducimus quo quae beatae porro nostrum pariatur autem? Doloribus, totam consequuntur vero nobis vitae ratione.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elitOptio.
+                </p>
+                </div>
+
+                <div class="autoShow">
+                    <figure>
+                        <img class="img2" src="images/about2.png" alt="">
+                       
+                    </figure>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi consequuntur ipsa reprehenderit, iste unde dicta nisi earum a inventore deserunt aperiam beatae repellendus debitis odio laboriosam error. Quia, quasi.
+                      Sit dolor minus suscipit sequi. Voluptas quibusdam aspernatur id numquam magnam nobis alias vitae eius nam consectetur, omnis hic odit temporibus quaerat reiciendis iure dignissimos culpa optio distinctio illum? Optio.
+                      Assumenda minus voluptatem maiores amet nostrum quae a sed provident ut fugit cumque autem cupiditate officiis beatae ipsa, nemo incidunt dolor optio illum quo fuga impedit, velit nisi. Eum, fuga?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eligendi consequuntur ipsa reprehenderit, iste unde dicta nisi earum a inventore deserunt aperiam beatae repellendus debitis odio laboriosam error. Quia, quasi.
+                    </p>
+                </div>
+                <div class="autoShow">
+                    <figure>
+                        <img class="img3" src="images/about3.png" alt="">
+                       
+                    </figure>
+                </div>
+            </section>
+
+            <section class="grid grid-3">
+                <div class="autoBLur">YUSUF</div>
+                <div class="autoBLur">YAŞAR</div>
+                <div class="autoBLur">FRONTEND</div>
+                <div class="autoBLur">DEVELOPER</div>
+                <div class="autoBLur">SEE MORE<a class="a-son" href="mailto:yasaryusuf916@gmail.com">&#8599;</a>
+                </div>
+            </section>
+             <div class="credit">
+            created by <span>Yusuf Yaşar</span> | all rights reserved
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

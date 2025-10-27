@@ -1,0 +1,153 @@
+body {
+    background-color: #e8e8e8;
+}
+
+.contact {
+    margin: 80px;
+}
+
+.heading {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    border-bottom: 0.1rem solid rgb(0, 0, 0);
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: red;
+}
+
+.contact .row {
+    display: flex;
+    background-color: black;
+    gap: 10px;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact .row form h3 {
+    text-transform: uppercase;
+    font-size: 35px;
+    color: white;
+}
+
+.contact .row form .inputBox {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px 0;
+    border: 1px solid white;
+}
+
+.contact .row form .inputBox i {
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.inp-contact {
+    width: 100%;
+    padding: 1rem;
+    font-size: 16px;
+    color: white;
+    text-transform: none;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+.contact .row form .btn-submit {
+    background-color: white;
+    color: black;
+    width: 120px;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 1rem 1.75rem;
+    border-radius: 30rem;
+
+}
+
+.btn-submit:hover {
+    opacity: 0.6;
+}
+
+/* contact end */
+
+/* footer start */
+
+footer {
+    margin-top: 10%;
+}
+/* footer end */
+/* contact öneri start */
+form {
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.oneri {
+    font-size: 20px;
+    color: black;
+
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #514c4c;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-contact {
+    background-color: #1fae23;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 200px;
+}
+
+.submit-contact:hover {
+    background-color: #518e54;
+}
+
+/* contact öneri end */
+
+/* responsive start */
+
+@media (max-width:768px) {
+
+    .contact .row {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .heading {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
